@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Social Media · Arina</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #013d6b;
+      color: #f5cb5c;
+      margin: 0;
+    }
+    .nav {
+      background: #0e2a53; /* slightly lighter than background for nav */
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    .nav a {
+      margin: 0 10px;
+      color: #f5cb5c;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .nav a:hover,
+    .nav a:focus {
+      color: #fff;
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 18px auto;
+      padding: 16px;
+      background: rgba(245, 203, 92, 0.1); /* subtle gold tinted background */
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(245, 203, 92, 0.2);
+    }
+    .card {
+      background: #013d6b;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(245, 203, 92, 0.3);
+      text-align: center;
+    }
+    .card h2 {
+      margin-bottom: 12px;
+      color: #f5cb5c;
+    }
+    .social-list a {
+      display: inline-block;
+      margin: 8px;
+      padding: 10px 18px;
+      background: #f5cb5c;
+      color: #013d6b;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .social-list a:hover,
+    .social-list a:focus {
+      background: #d4ad27;
+      color: #012a4a;
+    }
+    .contact-form {
+      margin-top: 20px;
+      text-align: left;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #f5cb5c;
+    }
+    .contact-form label {
+      display: block;
+      margin-top: 12px;
+      font-weight: 600;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #f5cb5c;
+      border-radius: 6px;
+      background: #013d6b;
+      color: #f5cb5c;
+      font-size: 15px;
+      transition: border-color 0.3s ease;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #fff176;
+      background: #012a4a;
+    }
+    .btn {
+      background: #f5cb5c;
+      color: #013d6b;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .btn:hover,
+    .btn:focus {
+      background: #d4ad27;
+      color: #012a4a;
+    }
+    img {
+      width: 240px;
+      border-radius: 8px;
+      margin-top: 12px;
+      cursor: pointer;
+      border: 3px solid #f5cb5c;
+      transition: transform 0.3s ease;
+    }
+    img:hover,
+    img:focus {
+      transform: scale(1.05);
+      border-color: #fff176;
+    }
+    /* Modal */
+    #modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(1, 61, 107, 0.9);
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    #modal img {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #f5cb5c;
+    }
+ 
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 15px;
+      color: #013d6b;
+    }
+  </style>
+</head>
+<body>
+
+
+  <main>
+    <div class="card" role="main">
+      <h2>Social Media & Contact</h2>
+      <p>Find me / Contact me:</p>
+
+      <div class="social-list" aria-label="Social media links">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:nurarina0317@gmail.com">Email</a>
+      </div>
+
+      <h3 style="margin-top:14px;">Contact Form</h3>
+      <form class="contact-form" onsubmit="submitForm(event)" aria-label="Contact form">
+        <label for="name">Name</label>
+        <input id="name" type="text" required aria-required="true" />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" required aria-required="true" />
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" required aria-required="true"></textarea>
+
+        <button class="btn" type="submit">Send </button>
+        <p class="small" style="margin-top:8px; color:#fff9c4;">
+         
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <div
+    id="modal"
+    style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); align-items:center; justify-content:center;"
+    role="dialog"
+    aria-modal="true"
+  >
+    <img id="modalImg" alt="Modal Image" />
+  </div>
+<footer> © 2025 Nur Arina | Chrome | 1366x768 | 2025-12-10
+</footer></footer>
+</div>
+  
+</body>
+</html>

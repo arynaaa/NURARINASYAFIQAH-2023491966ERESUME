@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Arina Personal Website</title>
+  <style>
+    body 
+{
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #013d6b;
+    }
+  
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(90deg, #F5CB5C, #F5CB5C);
+      padding: 15px 0;
+      box-shadow: 0 4px 100px rgba(0, 0, 0, 0.1);
+    }
+
+    
+    .navbar a {
+      position: relative;
+      text-decoration: none;
+      color: #013d6b;
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 25px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      left: 0;
+      bottom: -5px;
+      background-color: #013d6b;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .navbar a:hover {
+      color: white;
+    }
+
+    .navbar a:hover::after {
+      width: 100%;
+    }
+
+    .navbar a:hover {
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="home.html" target="right">Home</a>
+    <a href="aboutme.html" target="right">About Me</a>
+    <a href="education.html" target="right">Education</a>
+    <a href="experience.html" target="right">Experience</a>
+    <a href="skillpassion.html" target="right">Skill&Passion</a>
+    <a href="contact.html" target="right">Contact</a>
+  </div>
+
+</body>
+</html>
